@@ -1,4 +1,4 @@
-# pacote_ericalp
+# Pacote Pypi
 
 Pacote genérico para aula de Open Source
 
