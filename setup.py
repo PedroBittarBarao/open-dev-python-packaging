@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
 from setuptools import setup
 
-setup(name='dev_aberto_pedrobb',
-      version='0.1',
+setup(name='dev_aberto',
+      version='0.3.4',
       packages=['dev_aberto'],
-      install_requires=["requests"],
-      scripts = ["scripts/hello.py"]
+      scripts=['scripts/hello.py'],
+      python_requires='>=3.12',
+      install_requires=['requests', 'setuptools','wheel'],
       )
