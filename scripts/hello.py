@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
-from dev_aberto import hello
+import dev_aberto
+import gettext
+from datetime import date
+import babel.dates as bd
+gettext.bindtextdomain('cli', 'locale')
+gettext.textdomain('cli')
+_ = gettext.gettext
+
 
 if __name__ == '__main__':
-    date, name = hello()
-    print('Último commit feito em:', date, ' por', name)
+    try:
+        data, name = dev_aberto.hello()
+        print(_('Last commit made in:'), bd.format_date(data), _(' by'), name)
+    except:
+        name = "fish"
+        print(_('Last commit made in:'), bd.format_date(), _(' by'), name)
+
+
+    
